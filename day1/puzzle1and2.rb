@@ -1,4 +1,6 @@
 require 'pry'
+require 'activesupport'
+
 def raw_input
   file = File.open('input.txt')
   file.readlines.map do |line|
@@ -18,15 +20,15 @@ end
 
 def puzzle2
   nums =
-    { "one" => "o1e",
-    "two" => "t2o",
-    "three" => "t3e",
-    "four" => "f4r",
-    "five" => "f5e",
-    "six" => "s6x",
-    "seven" => "s7n",
-    "eight" => "e8t",
-    "nine" => "n9e" }
+    { 'one' => 'o1e',
+      'two' => 't2o',
+      'three' => 't3e',
+      'four' => 'f4r',
+      'five' => 'f5e',
+      'six' => 's6x',
+      'seven' => 's7n',
+      'eight' => 'e8t',
+      'nine' => 'n9e' }
 
   input = raw_input
   puzzle_data = input.map do |line|
