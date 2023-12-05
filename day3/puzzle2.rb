@@ -20,8 +20,8 @@ end
 
 def all_relevent_characters(line_number, range)
   relevent_lines = [[line_number - 1, 0].max, line_number, line_number + 1]
-  relevent_lines.to_h do |line|
-    [line, relevent_characters_ind_line(line, range)]
+  relevent_lines.to_h do |line_number|
+    [line_number, relevent_characters_ind_line(line_number, range)]
   end
 end
 
